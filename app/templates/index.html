@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Translator</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
 </head>
 <body>
     <h1 id="main-title">Smart Translator</h1>
     <div id="main-container">
         <div id="input-section" class="section">
             <h2>Input Text</h2>
-            <textarea id="select-language" placeholder="Enter language to translate into..."></textarea>
+            <textarea id="target-language" placeholder="Enter language to translate into..."></textarea>
             <textarea id="input-text" placeholder="Enter text to translate..."></textarea>
-            <button id="translate-btn">Translate</button>
+            <button id="translate-btn" onclick="translateText()">Translate</button>
         </div>
         <div id="output-section" class="section">
             <h2>Translated Text</h2>

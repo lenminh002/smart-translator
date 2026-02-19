@@ -11,11 +11,15 @@ def hello_world():
     return render_template("index.html")
 
 
-# @app.route("/translate", methods=["POST"])
-# def translate():
-#     text = request.form["text"]
-#     translated_text = translate_text(text)
-#     return render_template("index.html", translated_text=translated_text)
+@app.route("/translate", methods=["POST"])
+async def translate():
+    data = request.json
+    text = data.get("text")
+    target_language = data.get("targetLanguage")
+
+
+    translated_text = await translate_text(text, target_language)
+    return jsonify({"reply": translated_text})
 
 
 if __name__ == "__main__":

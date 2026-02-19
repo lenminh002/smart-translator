@@ -28,7 +28,10 @@ async def translate_text(text, target_language):
             }
         ]
     )
-    return response.text
+
+    translated_text = response.text.strip()
+    print(f"Translated text: {translated_text}")
+    return translated_text
 
 
 
