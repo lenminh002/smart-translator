@@ -1,6 +1,5 @@
 *{
-font-family: Arial, Helvetica, sans-serif;
-
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
@@ -15,9 +14,9 @@ body{
     align-items: center;
     justify-content: center;
     width: 40%;
-    height: 80vh;
+    height: 85vh;
     border: 1px solid black;
-    margin-top: 1%;
+    margin-top: 0.5%;
 }
 .section{
     display: flex;
@@ -29,6 +28,11 @@ body{
     border: 1px solid black;
     margin: 4%;
 }
+#input-section{
+    height: 50%;
+}
+
+/* button */
 #translate-btn{
     width: 50%;
     background-color: #2b2b2b;
@@ -47,6 +51,7 @@ body{
     transform: scale(0.95);
 }
 
+/* textarea */
 textarea{
     width: 80%;
     height: 30%;
@@ -56,4 +61,8 @@ textarea{
 }
 #output-section textarea{
     height: 40%;
+}
+#select-language{
+    height: 6%;
+    margin-bottom: 2%;
 }
