@@ -2,6 +2,7 @@ async function translateText() {
     const inputElement = document.getElementById("input-text");
     const langElement = document.getElementById("target-language");
     const outputElement = document.getElementById("output-text");
+    const btnElement = document.getElementById("translate-btn");
 
     const text = inputElement.value.trim();
     const targetLanguage = langElement.value.trim();
@@ -12,11 +13,17 @@ async function translateText() {
     }
     else{
         try {
+
+            btnElement.disabled = true;
+            btnElement.textContent = "Translating...";
+
+            
             const res = await fetch("/translate", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({text, targetLanguage})
             });
+
             const data = await res.json();
             if(!res.ok){
                 throw new Error(data.error || "Translation failed");
@@ -27,6 +34,10 @@ async function translateText() {
         catch (error) {
             alert("Error: " + error.message);
             return;
+        }
+        finally {
+            btnElement.disabled = false;
+            btnElement.textContent = "Translate";
         }
 
 
