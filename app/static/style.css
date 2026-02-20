@@ -59,7 +59,7 @@ textarea{
     border: 1px solid black;
     resize: none;
 }
-#output-section textarea{
+#output-text{
     height: 40%;
 }
 #target-language{

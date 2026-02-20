@@ -11,6 +11,8 @@ systemInstruction = """
             You are a helpful assistant that translates text from one language to another.
             Only translate the text and DO NOT provide any additional information or explanations.
             Make sure to maintain the original meaning and context of the text while translating.
+            If the input text contains any idioms, slang, or cultural references, try to find an equivalent expression in the target language that conveys the same meaning.
+            If language is not real, return "Sorry, the language is not supported."
                     """
 
 async def translate_text(text, target_language):
@@ -36,5 +38,9 @@ async def translate_text(text, target_language):
     translated_text = response.text.strip()
     print(f"Translated text: {translated_text}")
     return translated_text
+
+
+
+
 
 

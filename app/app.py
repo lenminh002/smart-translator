@@ -1,7 +1,7 @@
 #run command: python3 app/main.py
 
 from flask import Flask, render_template, request, jsonify
-from ai import translate_text
+from app.translator import translate_text
 
 
 app = Flask(__name__, static_folder="static", template_folder="templates")
