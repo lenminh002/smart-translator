@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "Smart AI Translator",
+    "description": "Translate text instantly using Gemini AI.",
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": "icon.png"
+    }
+}
