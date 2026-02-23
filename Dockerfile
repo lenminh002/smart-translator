@@ -11,5 +11,4 @@ RUN uv sync --frozen
 
 COPY . .
 
-CMD ["uv", "run", "gunicorn", "--bind", "0.0.0.0:8000", "app.app:app"]
-
+CMD ["/app/.venv/bin/gunicorn", "--bind", "0.0.0.0:8080", "app.app:app"]

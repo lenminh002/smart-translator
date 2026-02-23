@@ -1,7 +1,7 @@
 #run command: python3 app/main.py
 
 from flask import Flask, render_template, request, jsonify
-from translator import translate_text
+from .translator import translate_text
 from flask_cors import CORS
 
 

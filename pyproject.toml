@@ -10,5 +10,6 @@ dependencies = [
     "flask[async]>=3.1.2",
     "google>=3.0.0",
     "google-genai>=1.63.0",
+    "gunicorn>=25.1.0",
     "python-dotenv>=1.2.1",
 ]
