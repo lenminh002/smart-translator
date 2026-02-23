@@ -1,0 +1,1 @@
+run python3 extension/app/app.py while open extension to let it works.
