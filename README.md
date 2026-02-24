@@ -9,8 +9,10 @@
 4. change the host in **extension/index.js** to **http://localhost:8080**
 
 ## HOW TO DEPLOY WITH DOCKER USING DOKPLOY
+- I've already deployed the backend so you can just try out the extension yourself by simply upload extension to chrome://extensions/ and enable developer mode, or:
 1. Create a new project on [Dokploy].
 2. Import this project to Dokploy.
 3. Change the host in **extension/index.js** to your Dokploy domain.
 4. Upload extension to chrome://extensions/ and enable developer mode.
+
 
