@@ -6,6 +6,7 @@ from google import genai
 load_dotenv()
 
 gemini_api_key = os.getenv("GEMINI_API_KEY")
+client = genai.Client(api_key=gemini_api_key)
 
 systemInstruction = """
             You are a helpful assistant that translates text from one language to another.
@@ -17,7 +18,6 @@ systemInstruction = """
 
 async def translate_text(text, target_language):
     try:
-        client = genai.Client(api_key=gemini_api_key)
         response = await client.aio.models.generate_content(
             model="gemini-3-flash-preview",
             config={
