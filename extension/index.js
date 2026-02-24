@@ -23,7 +23,7 @@ async function translateText() {
             btnElement.disabled = true;
             btnElement.textContent = "Translating...";
 
-
+            //change to your domain
             const res = await fetch("http://smart-translator-backend-xhc2dl-56f44e-72-62-125-194.traefik.me/translate", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
