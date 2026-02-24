@@ -9,7 +9,7 @@ app = Flask(__name__, static_folder="static", template_folder="templates")
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route("/")
-def hello_world():
+def index():
     return render_template("index.html")
 
 
