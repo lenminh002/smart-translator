@@ -6,7 +6,7 @@ from flask_cors import CORS
 
 
 app = Flask(__name__, static_folder="static", template_folder="templates")
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route("/")
 def hello_world():
