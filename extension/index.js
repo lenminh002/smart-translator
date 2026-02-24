@@ -24,7 +24,7 @@ async function translateText() {
             btnElement.textContent = "Translating...";
 
 
-            const res = await fetch("https://smart-translator-backend-xhc2dl-56f44e-72-62-125-194.traefik.me/translate", {
+            const res = await fetch("http://smart-translator-backend-xhc2dl-56f44e-72-62-125-194.traefik.me/translate", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ text, targetLanguage })
