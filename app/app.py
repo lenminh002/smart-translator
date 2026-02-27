@@ -16,7 +16,7 @@ def index():
 @app.route("/translate", methods=["POST"])
 async def translate():
     data = request.json
-    text = data.get("text")
+    text = data.get("inputText")
     target_language = data.get("targetLanguage")
 
 
