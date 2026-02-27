@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     btnElement.addEventListener('click', translateText);
     inputElement.addEventListener('input', saveData);
     langElement.addEventListener('input', saveData);
-    outputElement.addEventListener('input', saveData);
 });
 
 
@@ -26,6 +25,9 @@ async function translateText() {
 
             btnElement.disabled = true;
             btnElement.textContent = "Translating...";
+
+            inputElement.disabled = true;
+            langElement.disabled = true;
 
             //change to your domain
             const res = await fetch("http://smart-translator-backend-xhc2dl-56f44e-72-62-125-194.traefik.me/translate", {
@@ -48,6 +50,11 @@ async function translateText() {
         finally {
             btnElement.disabled = false;
             btnElement.textContent = "Translate";
+
+            inputElement.disabled = false;
+            langElement.disabled = false;
+
+            saveData();
         }
 
     }
