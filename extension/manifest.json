@@ -9,5 +9,8 @@
     },
     "host_permissions": [
         "http://smart-translator-backend-xhc2dl-56f44e-72-62-125-194.traefik.me/*"
+    ],
+    "permissions": [
+        "storage"
     ]
 }
